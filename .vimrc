@@ -23,5 +23,5 @@ autocmd BufNewFile,BufRead *.bemhtml set ft=javascript
 
 set title
 
-auto BufEnter * call system("tmux rename-window " . expand("%")) 
+auto BufEnter * call system("tmux rename-window \"vim " . expand("%:t") . "\"") 
 auto VimLeave * call system("tmux rename-window bash") 
