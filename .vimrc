@@ -20,3 +20,8 @@ set copyindent
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.bemhtml set ft=javascript
+
+set title
+
+auto BufEnter * call system("tmux rename-window " . expand("%")) 
+auto VimLeave * call system("tmux rename-window bash") 
