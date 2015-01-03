@@ -44,10 +44,6 @@ set guioptions-=r
 set guioptions-=L
 " Keep NERDTree window fixed between multiple toggles
 set winfixwidth
-" Auto open NERDTree
-" autocmd VimEnter * NERDTree
-" autocmd BufEnter * NERDTreeMirror
-" autocmd VimEnter * wincmd w
 " Show hidden files
 let NERDTreeShowHidden=1
 
@@ -64,8 +60,6 @@ set laststatus=2
 
 " Themes
 Bundle 'altercation/vim-colors-solarized'
-let g:solarized_termcolors=1
-
 Bundle 'tomasr/molokai'
 
 " vim Git extenshion
@@ -77,7 +71,7 @@ Bundle 'gregsexton/gitv'
 " sintax checker
 Bundle 'scrooloose/syntastic'
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [ 'javascript' ], 'passive_filetypes': ['html', 'css', 'slim'] }
 let g:syntastic_javascript_checkers = ['jshint', 'jscs']
@@ -92,6 +86,12 @@ function! ToggleErrors()
 endfunction
 
 nmap <script> <silent> <leader>l :call ToggleErrors()<CR>
+
+auto BufEnter * call SyntasticCheck()
+auto BufRead * call SyntasticCheck()
+
+" JSON support
+Bundle 'mitsuhiko/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -156,8 +156,13 @@ autocmd BufNewFile,BufRead *.bemhtml set ft=javascript
 
 set title
 
+" Tmux integration
 auto BufEnter * call system("tmux rename-window \"vim " . expand("%:t") . "\"") 
 auto VimLeave * call system("tmux rename-window bash")
 
 "Show lines numbers
 set number
+
+" check file change every 4 seconds ('CursorHold') and reload the buffer upon detecting change
+set autoread
+au CursorHold * checktime
