@@ -93,6 +93,9 @@ auto BufRead * call SyntasticCheck()
 " JSON support
 Bundle 'mitsuhiko/vim-json'
 
+" N-th match of M
+Bundle 'vim-scripts/IndexedSearch'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
