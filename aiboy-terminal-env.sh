@@ -1,13 +1,11 @@
 #!/bin/sh
 
 sudo apt-get update
-sudo apt-get -y install curl wget vim tmux git dconf-cli nodejs npm
+sudo apt-get -y install curl wget vim tmux git dconf-cli nodejs-legacy npm
 
 npm config set prefix ~/npm
 export PATH="$PATH:$HOME/npm/bin"
 npm install -g jshint
-
-sudo ln -s /usr/bin/nodejs /usr/sbin/node
 
 cd ~
 git init
@@ -18,4 +16,4 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
-gnome-terminal-colors-solarized/install.sh
+gnome-terminal-colors-solarized/set_dark.sh
