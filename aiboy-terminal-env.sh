@@ -1,7 +1,13 @@
 #!/bin/sh
 
 sudo apt-get update
-sudo apt-get -y install curl wget vim tmux git dconf-cli
+sudo apt-get -y install curl wget vim tmux git dconf-cli nodejs npm
+
+npm config set prefix ~/npm
+export PATH="$PATH:$HOME/npm/bin"
+npm install -g jshint
+
+sudo ln -s /usr/bin/nodejs /usr/sbin/node
 
 cd ~
 git init
