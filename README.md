@@ -8,5 +8,5 @@ Setup
 ```bash
 cd ~
 sudo apt-get install wget
-wget https://raw.githubusercontent.com/aiboy/terminal-env/master/aiboy-terminal-env.sh
-sh aiboy-terminal-env.sh
+wget https://raw.githubusercontent.com/aiboy/terminal-env/master/ubuntu-env.sh
+sh ubuntu-env.sh
