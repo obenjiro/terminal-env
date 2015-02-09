@@ -74,7 +74,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [ 'javascript' ], 'passive_filetypes': ['html', 'css', 'slim'] }
-let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+let g:syntastic_javascript_checkers = ['jshint']
 
 function! ToggleErrors()
     if empty(filter(tabpagebuflist(), 'getbufvar(v:val, "&buftype") is# "quickfix"'))
