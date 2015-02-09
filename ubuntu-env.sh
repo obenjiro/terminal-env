@@ -18,6 +18,7 @@ vim +PluginInstall +qall
 # will force to reload tmux configuration
 killall tmux
 
+git config --global core.editor "vim"
 # solorized color cheme for ubuntu
 git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
 gnome-terminal-colors-solarized/set_dark.sh
