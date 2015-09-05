@@ -4,11 +4,15 @@ sudo apt-get -y install curl wget vim tmux git dconf-cli htop build-essential li
 
 # nodejs throu nvm
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
-rm install.sh
 
+# forsing nvm to appear without relogin
+exec bash
+
+# installing stable version on nodejs
 nvm install stable
 nvm alias default stable
 
+# using home folder for global modules ( allows to avoid using sudo )
 npm config set prefix ~/npm
 export PATH="$PATH:$HOME/npm/bin"
 npm install -g jshint
