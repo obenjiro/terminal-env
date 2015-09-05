@@ -6,7 +6,7 @@ sudo apt-get -y install curl wget vim tmux git dconf-cli htop build-essential li
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
 
 # forsing nvm to appear without relogin
-exec bash
+source ~/.bashrc
 
 # installing stable version on nodejs
 nvm install stable
