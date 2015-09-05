@@ -1,6 +1,13 @@
 #!/bin/sh
 sudo apt-get update
-sudo apt-get -y install curl wget vim tmux git dconf-cli nodejs-legacy npm htop
+sudo apt-get -y install curl wget vim tmux git dconf-cli htop build-essential libssl-dev
+
+# nodejs throu nvm
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
+rm install.sh
+
+nvm install stable
+nvm alias default stable
 
 npm config set prefix ~/npm
 export PATH="$PATH:$HOME/npm/bin"
