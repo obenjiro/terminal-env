@@ -1,12 +1,16 @@
 #!/bin/sh
 sudo apt-get update
-sudo apt-get -y install curl wget vim tmux git dconf-cli htop build-essential libssl-dev
+sudo apt-get -y install curl wget vim tmux git dconf-cli htop build-essential libssl-dev xdotool
 
 # nodejs throu nvm
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
 
 # forsing nvm to appear without relogin
-source ~/.bashrc
+function re_source {
+    xdotool type 'source ~/.bashrc'
+    xdotool key Return
+}
+re_source
 
 # installing stable version on nodejs
 nvm install stable
