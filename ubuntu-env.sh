@@ -1,6 +1,6 @@
 #!/bin/sh
 sudo apt-get update
-sudo apt-get -y install curl wget vim tmux git dconf-cli htop build-essential libssl-dev
+sudo apt-get -y install curl wget vim tmux git dconf-cli htop build-essential libssl-dev gconf2
 
 # nodejs throu nvm
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
