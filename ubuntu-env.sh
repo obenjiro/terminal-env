@@ -38,9 +38,8 @@ mv dircolors.ansi-dark .dircolors
 eval `dircolors ~/.dircolors`
 
 git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git
-cd gnome-terminal-colors-solarized
-./set_dark.sh
-cd ~
+cd gnome-terminal-colors-solarized; mv * ../
+cd ~; ./set_dark.sh
 
 # reload shell - so nvm will appear immidiatly
 exec bash
