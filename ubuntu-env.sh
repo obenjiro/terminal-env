@@ -1,14 +1,13 @@
 #!/bin/sh
 sudo apt-get update
-sudo apt-get -y install curl wget vim tmux git dconf-cli htop build-essential libssl-dev xdotool
+sudo apt-get -y install curl wget vim tmux git dconf-cli htop build-essential libssl-dev
 
 # nodejs throu nvm
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.26.1/install.sh | bash
 
 # forsing nvm to appear without relogin
-chmod a+x ~/.bashrc
-PS1='$ '
-source ~/.bashrc
+export NVM_DIR="/home/vagrant/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # installing stable version on nodejs
 nvm install stable
@@ -36,3 +35,6 @@ git config --global core.editor "vim"
 # solorized color cheme for ubuntu
 git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
 gnome-terminal-colors-solarized/set_dark.sh
+
+# reload shell - so nvm will appear immidiatly
+exec bash
