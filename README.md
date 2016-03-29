@@ -21,6 +21,12 @@ MacOS setup
 ============
 TODO!
 
+Solarized Theme
+===========
+TODO!
+https://github.com/altercation/solarized
+
+
 Note to myself
 ============
 To select text in Tmux ( gnome terminal ) press Shift key while selecting
