@@ -133,7 +133,7 @@ endif
 let g:airline_theme='base16'
 syntax on
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 " ┌───────────────────────────────────┐
 " │              Legalcy              │
