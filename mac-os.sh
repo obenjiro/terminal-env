@@ -7,6 +7,7 @@ brew install curl wget vim tmux git htop
 # getting config files and installing plugins
 cd ~
 rm mac-os.sh
+rm .vimrc
 git init
 git remote add origin https://github.com/aiboy/terminal-env.git
 git pull origin master
