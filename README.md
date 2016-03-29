@@ -29,4 +29,4 @@ https://github.com/altercation/solarized
 
 Note to myself
 ============
-To select text in Tmux ( gnome terminal ) press Shift key while selecting
+To select text in Tmux ( gnome terminal ) press Shift key while selecting and Option/Alt key in iTerm2
