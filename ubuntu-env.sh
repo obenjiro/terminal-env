@@ -21,6 +21,7 @@ npm install -g jshint
 # getting config files and installing plugins
 cd ~
 rm ubuntu-env.sh
+rm .vimrc
 git init
 git remote add origin https://github.com/aiboy/terminal-env.git
 git pull origin master
