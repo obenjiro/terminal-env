@@ -172,6 +172,8 @@ auto VimLeave * call system("tmux rename-window bash")
 "Show lines numbers
 set number
 
+set bs=indent,eol,start     " Backspace over everything in insert mode
+
 " check file change every 4 seconds ('CursorHold') and reload the buffer upon detecting change
 set autoread
 au CursorHold * checktime
