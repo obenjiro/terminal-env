@@ -32,7 +32,12 @@ vim +PluginInstall +qall
 # will force to reload tmux configuration
 killall tmux
 
+# zhs
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+# git configuration
 git config --global core.editor "vim"
+
 # solorized color cheme for ubuntu
 wget --no-check-certificate https://raw.github.com/seebi/dircolors-solarized/master/dircolors.ansi-dark
 mv dircolors.ansi-dark .dircolors
