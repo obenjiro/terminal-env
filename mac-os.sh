@@ -2,7 +2,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew update
-brew install curl wget vim tmux git htop
+brew install curl wget vim tmux git htop node
 
 # getting config files and installing plugins
 cd ~
@@ -30,8 +30,16 @@ echo "plugins=(git colorize sublime web-search nvm z alias-tips)" >> ~/.zshrc
 echo "ZSH_THEME=\"miloshadzic\"" >> ~/.zshrc
 echo "DISABLE_AUTO_TITLE=\"true\"" >> ~/.zshrc
 
+# npm config
+mkdir ~/.npm
+npm config set prefix ~/.npm
+echo "export PATH=\"$PATH:$HOME/.npm/bin\"" >> ~/.zshrc
+
 # git configuration
 git config --global core.editor "vim"
 
 # cleanup
 rm -rf ~/.git
+
+# update
+source ~/.zshrc
