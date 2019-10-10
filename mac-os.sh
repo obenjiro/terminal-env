@@ -3,6 +3,8 @@
 
 brew update
 brew install curl wget vim tmux git htop node
+brew install fzf
+$(brew --prefix)/opt/fzf/install
 
 # getting config files and installing plugins
 cd ~
