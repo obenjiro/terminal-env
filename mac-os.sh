@@ -3,6 +3,7 @@
 
 brew update
 brew install curl wget vim tmux git htop node
+brew install --cask iterm2
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
