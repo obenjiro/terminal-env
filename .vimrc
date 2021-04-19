@@ -99,9 +99,6 @@ Bundle 'vim-scripts/IndexedSearch'
 " Emmet plugin
 Bundle 'mattn/emmet-vim'
 
-" HackerNews plugin
-Bundle 'ryanss/vim-hackernews'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
