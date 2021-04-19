@@ -4,8 +4,7 @@
 brew update
 brew install curl wget vim tmux git htop node
 brew install --cask iterm2
-brew install fzf
-$(brew --prefix)/opt/fzf/install
+brew install --cask visual-studio-code
 
 # getting config files and installing plugins
 cd ~
@@ -40,6 +39,9 @@ echo "export PATH=\"$PATH:$HOME/.npm/bin\"" >> ~/.zshrc
 
 # git configuration
 git config --global core.editor "vim"
+
+brew install fzf
+$(brew --prefix)/opt/fzf/install
 
 # cleanup
 rm -rf ~/.git
