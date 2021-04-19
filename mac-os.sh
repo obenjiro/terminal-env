@@ -29,7 +29,6 @@ killall tmux
 # zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 echo "plugins=(git colorize sublime web-search nvm z alias-tips)" >> ~/.zshrc
-echo "ZSH_THEME=\"miloshadzic\"" >> ~/.zshrc
 echo "DISABLE_AUTO_TITLE=\"true\"" >> ~/.zshrc
 
 # npm config
