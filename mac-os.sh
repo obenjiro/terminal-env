@@ -2,7 +2,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew update
-brew install curl wget vim tmux git htop node
+brew install curl wget vim tmux git htop
 brew install --cask iterm2
 brew install --cask visual-studio-code
 
@@ -31,14 +31,22 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 echo "plugins=(git colorize sublime web-search nvm z alias-tips)" >> ~/.zshrc
 echo "DISABLE_AUTO_TITLE=\"true\"" >> ~/.zshrc
 
+# Node with n
+curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n
+bash n lts
+
 # npm config
 mkdir ~/.npm
 npm config set prefix ~/.npm
 echo "export PATH=\"$PATH:$HOME/.npm/bin\"" >> ~/.zshrc
 
+# N for Node
+npm install -g n
+
 # git configuration
 git config --global core.editor "vim"
 
+# Fuzzy comand finder
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
