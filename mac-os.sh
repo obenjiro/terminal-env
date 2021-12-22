@@ -43,6 +43,9 @@ echo "export PATH=\"$PATH:$HOME/.npm/bin\"" >> ~/.zshrc
 # N for Node
 npm install -g n
 
+#PNPM
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+
 # git configuration
 git config --global core.editor "vim"
 
